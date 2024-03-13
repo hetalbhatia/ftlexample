@@ -1,3 +1,4 @@
+const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -9,6 +10,8 @@ module.exports = {
   // },
   output: {
     publicPath: "http://localhost:3000/",
+    path: path.resolve(__dirname, "./dist/"),
+    filename: "bundle.js",
   },
 
   resolve: {

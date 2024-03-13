@@ -1,3 +1,4 @@
+const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
@@ -5,6 +6,8 @@ const packageJsonDeps = require("./package.json").dependencies;
 module.exports = {
   output: {
     publicPath: "http://localhost:3001/",
+    path: path.resolve(__dirname, "./dist/"),
+    filename: "bundle.js",
   },
 
   resolve: {

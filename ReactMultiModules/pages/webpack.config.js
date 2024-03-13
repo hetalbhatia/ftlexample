@@ -8,6 +8,8 @@ const packageJsonDeps = require("./package.json").dependencies;
 module.exports = {
   output: {
     publicPath: "http://localhost:3002/",
+    path: path.resolve(__dirname, "./dist/"),
+    filename: "bundle.js",
   },
 
   resolve: {

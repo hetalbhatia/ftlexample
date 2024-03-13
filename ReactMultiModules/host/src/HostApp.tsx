@@ -18,6 +18,7 @@ const HostApp = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Recipes />} />
+          <Route path="/hello" element={<Recipes />} /><!-- this is to support spring app route -->
           <Route path="/recipes/:slug" element={<Recipe />} />
         </Routes>
       </BrowserRouter>
