@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class TestController {
 
     @RequestMapping("/hello")
-    public String hello(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
+    public String hello(Model model,
+                        @RequestParam(value="name", required=false, defaultValue="World") String name
+
+    ) {
         model.addAttribute("name", name);
         return "welcome";
     }
